@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets grab a drink tomorrow? U+1F422 </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff6347;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 1.5em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            padding: 12px 30px;
+            font-size: 1.2em;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .yes-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .yes-button:hover {
+            background-color: #218838;
+        }
+
+        .no-button {
+            background-color: #dc3545;
+            color: white;
+            cursor: not-allowed;
+        }
+
+        .no-button:hover {
+            background-color: #c82333;
+        }
+
+        .no-button:active {
+            background-color: #c82333;
+        }
+
+        .thank-you {
+            display: none;
+            font-size: 1.3em;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will You Go on a Date with Me?</h1>
+        <p class="question">Please choose one of the options below:</p>
+
+        <button class="button yes-button" onclick="acceptDate()">Yes, I would love to!</button>
+        <button class="button no-button" onclick="declineDate()" disabled>No, I'm not interested</button>
+
+        <p class="thank-you" id="thank-you-message">Thank you for saying yes! I can't wait to spend time with you. 💖</p>
+    </div>
+
+    <script>
+        function acceptDate() {
+            // Show thank you message and hide buttons
+            document.getElementById("thank-you-message").style.display = "block";
+            document.querySelector('.yes-button').style.display = 'none';
+            document.querySelector('.no-button').style.display = 'none';
+        }
+
+        function declineDate() {
+            // "No" button does nothing as it's disabled
+            // You can add a simple alert or another message if needed
+            alert("I appreciate your honesty, but you can't decline! 😜");
+        }
+    </script>
+
+</body>
+</html>
+
